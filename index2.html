@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Yaqeen Al Rasekh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #1A69B3 !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FFD700 !important; /* Golden highlight on hover */
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-top: 10px;
+            color: #1A69B3;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1, h2 {
+    color: #1A69B3; 
+    font-weight: bold; /* Makes the text bold */
+}
+  
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 15px;
+        }
+    /* Chat Button */
+    .chat-button-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    #chat-button {
+        background-color: #1A69B3;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 15px 20px;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .chat-box {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 300px;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    .chat-header {
+        background-color: #1A69B3;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .chat-content {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .chat-content p {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .chat-content form input,
+    .chat-content form textarea,
+    .chat-content form button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .chat-content form button {
+        background-color: #1A69B3;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close-btn {
+        background: none;
+        color: white;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" style="max-width: 40px; margin-right: 10px;"> Al Yaqeen Al Rasekh
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="images/logo.png" alt="Company Logo">
+        <h1>Welcome to Al Yaqeen Al Rasekh</h1>
+        <p>Enhance your building's performance with our top-tier maintenance services.</p>
+    </div>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About AL YAQEEN AL RASEKH</h2>
+            <p>We specialize in technical works and general maintenance with years of experience providing top-notch services to our clients. Our team is committed to quality and excellence in every project we undertake.</p>
+            <div class="row align-items-center mt-4">
+                <div class="col-md-6">
+                    <img src="design.jpg" alt="Experience Image" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h3>Our Experience</h3>
+                    <p>
+                        With over 7 years of experience in technical works and general maintenance, we specialize in providing high-quality installation, maintenance, and operational services across various sectors. Our expertise ensures reliable and efficient solutions tailored to meet the unique needs of our clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="design.jpg" alt="Stone Installation Works" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Stone Installation Works</h5>
+                            <p class="card-text">High-quality stone installation for all your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" alt="Interior Design" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Interior Design Implementation Works (Decor)</h5>
+                            <p class="card-text">Professional interior design services to elevate your spaces.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" alt="Kitchen Installation" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Installation of Fitted Kitchens Works</h5>
+                            <p class="card-text">Efficient and stylish kitchen installations tailored to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" alt="Buildings Maintenance" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Buildings Maintenance</h5>
+                            <p class="card-text">Comprehensive maintenance solutions for all types of buildings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" alt="Aluminium Installation" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Aluminium Installation Works</h5>
+                            <p class="card-text">Expert aluminium installations for various applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x200" alt="Pasco and Kerbstone" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasco and Kerbstone Works</h5>
+                            <p class="card-text">Durable and visually appealing pasco and kerbstone installations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>Have a project in mind? Reach out to us!</p>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #1A69B3; color: white;" class="py-4 text-center">
+        <div class="container text-center">
+            <p>&copy; 2024 Al Yaqeen Al Rasekh. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <div class="chat-button-container">
+        <button id="chat-button" onclick="toggleChatBox()">💬</button>
+        <div id="chat-box" class="chat-box" style="display: none;">
+            <div class="chat-header">
+                <span>AL YAQEEN AL RASEKH</span>
+                <button class="close-btn" onclick="toggleChatBox()">✖</button>
+            </div>
+            <div class="chat-content">
+                <p>Hi! Let us know how we can help and we’ll respond shortly.</p>
+                <form id="chat-form">
+                    <input type="text" id="name" placeholder="Name*" required>
+                    <input type="email" id="email" placeholder="Email*" required>
+                    <textarea id="message" placeholder="How can we help?*" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleChatBox() {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+        }
+    
+        document.getElementById('chat-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            // Prepare data to send
+            const requestData = {
+                name,
+                email,
+                message,
+            };
+    
+            // Save data locally (as a placeholder, replace with server code)
+            localStorage.setItem('chatRequest', JSON.stringify(requestData));
+            alert('Your message has been saved locally. Implement server-side code for live submissions.');
+            
+            // Clear form
+            document.getElementById('chat-form').reset();
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

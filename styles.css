@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+header {
+    background: linear-gradient(to right, #0062cc, #0056b3);
+}
+
+footer {
+    background-color: #333;
+}
